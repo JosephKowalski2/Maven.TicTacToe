@@ -21,7 +21,7 @@ public class Board {
         //vertical win
         if (tictactoeBoard[0][0] == 'X' && tictactoeBoard[1][0] == 'X' && tictactoeBoard[2][0] == 'X')
             return true;
-        if (tictactoeBoard[0][1] == 'X' && tictactoeBoard[1][1] == 'X' && tictactoeBoard[1][2] == 'X')
+        if (tictactoeBoard[0][1] == 'X' && tictactoeBoard[1][1] == 'X' && tictactoeBoard[2][1] == 'X')
             return true;
         if (tictactoeBoard[0][2] == 'X' && tictactoeBoard[1][2] == 'X' && tictactoeBoard[2][2] == 'X')
             return true;
@@ -30,6 +30,8 @@ public class Board {
             return true;
         if (tictactoeBoard[0][2] == 'X' && tictactoeBoard[1][1] == 'X' && tictactoeBoard[2][0] == 'X')
             return true;
+
+            return false;
     }
 
     public Boolean isInFavorOfO() {
@@ -43,7 +45,7 @@ public class Board {
         //vertical win
         if (tictactoeBoard[0][0] == 'O' && tictactoeBoard[1][0] == 'O' && tictactoeBoard[2][0] == 'O')
             return true;
-        if (tictactoeBoard[0][1] == 'O' && tictactoeBoard[1][1] == 'O' && tictactoeBoard[1][2] == 'O')
+        if (tictactoeBoard[0][1] == 'O' && tictactoeBoard[1][1] == 'O' && tictactoeBoard[2][1] == 'O')
             return true;
         if (tictactoeBoard[0][2] == 'O' && tictactoeBoard[1][2] == 'O' && tictactoeBoard[2][2] == 'O')
             return true;
@@ -52,6 +54,8 @@ public class Board {
             return true;
         if (tictactoeBoard[0][2] == 'O' && tictactoeBoard[1][1] == 'O' && tictactoeBoard[2][0] == 'O')
             return true;
+
+            return false;
     }
 
     public Boolean isTie() {
@@ -66,6 +70,7 @@ public class Board {
             return "X";
         else if (isInFavorOfO())
             return "O";
-
+        else
+            return "";
     }
 }
